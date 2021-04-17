@@ -10,3 +10,6 @@
 [submodule "src-dav1d"]
 	path = src-dav1d
 	url = https://code.videolan.org/videolan/dav1d.git
+[submodule "src-nvcodec"]
+	path = src-nvcodec
+	url = https://github.com/FFmpeg/nv-codec-headers.git
