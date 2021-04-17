@@ -1,9 +1,9 @@
-name: On Pull Request
+name: On PR
 
 on:
   pull_request:
     branches: [ main ]
-    
+
 env:
   CARGO_TERM_COLOR: always
   BASE_DOCKERFILE: 11.1-cudnn8-u20.04/Dockerfile
@@ -71,4 +71,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build Test
       run: |
-        docker build --build-arg CUDA_ARCH=$CUDA_ARCH --pull -t dev/build:test-$CUDA_ARCH -f $BASE_DOCKERFILE .        
+        docker build --build-arg CUDA_ARCH=$CUDA_ARCH --pull -t dev/build:test-$CUDA_ARCH -f $BASE_DOCKERFILE .

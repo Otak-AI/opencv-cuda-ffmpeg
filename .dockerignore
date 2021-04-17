@@ -1,0 +1,5 @@
+.git/
+11.1-cudnn8-u20.04/
+
+.dockerignore
+.gitmodules
