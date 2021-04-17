@@ -90,10 +90,14 @@ RUN apt-get update && \
     zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
 
+RUN pwd && \
+    ls -Falg
+
 ### FFmpeg
 
 RUN mkdir /app/source/src-dav1d/build && \
     cd /app/source/src-dav1d/build && \
+    ls -Falg ../ && \
     meson setup \
     -Denable_tools="false" \
     -Denable_test="false" \
@@ -105,6 +109,7 @@ RUN mkdir /app/source/src-dav1d/build && \
 
 RUN mkdir /app/source/src-svtav1/build && \
     cd /app/source/src-svtav1/build && \
+    ls -Falg ../ && \
     cmake -G "Unix Makefiles" \
     -DCMAKE_INSTALL_PREFIX="/app/ffmpeg" \
     -DCMAKE_BUILD_TYPE="Release" \
@@ -153,10 +158,11 @@ RUN cd /app/source/src-ffmpeg && \
     --extra-libs="-lpthread -lm" \
     --nvccflags="${NVCCPARAMS}" \
     --pkg-config-flags="--static" \
-    --prefix="/app/ffmpeg" && \
+    --prefix="/app/ffmpeg"; \
+    tail -50 ffbuild/config.log && \
     make -j$(nproc) && \
     make install
 
-RUN rm -rf src-ffmpeg src-dav1d src-nvcodec src-svtav
+RUN rm -rf src-ffmpeg src-dav1d src-nvcodec src-svtav1
 
 ### OpenCV
