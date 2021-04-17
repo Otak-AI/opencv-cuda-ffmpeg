@@ -1,0 +1,3 @@
+[submodule "src-opencvex"]
+	path = src-opencvex
+	url = https://github.com/opencv/opencv_contrib.git
