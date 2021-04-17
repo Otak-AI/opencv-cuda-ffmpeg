@@ -4,3 +4,6 @@
 [submodule "src-opencv"]
 	path = src-opencv
 	url = https://github.com/opencv/opencv.git
+[submodule "src-svtav1"]
+	path = src-svtav1
+	url = https://gitlab.com/AOMediaCodec/SVT-AV1.git
