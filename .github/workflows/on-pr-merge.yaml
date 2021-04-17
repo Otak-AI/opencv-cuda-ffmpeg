@@ -23,7 +23,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
@@ -48,7 +48,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
@@ -73,7 +73,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
@@ -98,7 +98,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
@@ -123,7 +123,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
@@ -148,7 +148,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
@@ -173,7 +173,7 @@ jobs:
     - name: Build & Push
       run: |
         # Login to Github docker registry
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.U360_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # Compose proper Image ID
         IMAGE_TAG=ghcr.io/${{ github.repository }}/$BASE_IMAGE_NAME-$CUDA_ARCH
