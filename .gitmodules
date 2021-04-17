@@ -7,3 +7,6 @@
 [submodule "src-svtav1"]
 	path = src-svtav1
 	url = https://gitlab.com/AOMediaCodec/SVT-AV1.git
+[submodule "src-dav1d"]
+	path = src-dav1d
+	url = https://code.videolan.org/videolan/dav1d.git
